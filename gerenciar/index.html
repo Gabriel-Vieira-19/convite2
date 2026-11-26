@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+  <meta name="robots" content="noindex,nofollow">
+  <title>Gerenciar convites — 18 anos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../assets/manager.css">
+</head>
+
+<body>
+  <main class="manager">
+    <header class="manager-header">
+      <p class="eyebrow">ADMINISTRAÇÃO</p>
+      <h1>Gerenciar convites</h1>
+      <p>
+        Use somente um dos dois links abaixo ao enviar os convites.
+        Cada confirmação continuará recebendo seu próprio link de edição.
+      </p>
+    </header>
+
+    <section class="invite-grid" aria-label="Links dos convites">
+      <article class="invite-card">
+        <span class="invite-badge">FAMÍLIA</span>
+        <h2>Convite familiar</h2>
+        <p>Permite a confirmação de até 15 participantes.</p>
+
+        <label for="family-link">LINK</label>
+        <input id="family-link" type="text" readonly>
+
+        <div class="actions">
+          <button type="button" data-copy="family">COPIAR LINK</button>
+          <a data-open="family" target="_blank" rel="noopener noreferrer">
+            ABRIR
+          </a>
+        </div>
+      </article>
+
+      <article class="invite-card">
+        <span class="invite-badge">INDIVIDUAL</span>
+        <h2>Convite de amigo</h2>
+        <p>Permite a confirmação de somente 1 participante.</p>
+
+        <label for="friend-link">LINK</label>
+        <input id="friend-link" type="text" readonly>
+
+        <div class="actions">
+          <button type="button" data-copy="friend">COPIAR LINK</button>
+          <a data-open="friend" target="_blank" rel="noopener noreferrer">
+            ABRIR
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <p class="manager-note">
+      Esta página apenas facilita o envio dos dois links. O controle das
+      confirmações continua sendo feito pela planilha.
+    </p>
+
+    <div
+      id="manager-toast"
+      class="manager-toast"
+      role="status"
+      aria-live="polite"
+    ></div>
+  </main>
+
+  <script src="../assets/invites.js"></script>
+  <script src="../assets/manage.js"></script>
+</body>
+</html>

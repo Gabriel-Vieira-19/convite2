@@ -1,0 +1,204 @@
+:root {
+  --navy: #071a33;
+  --navy-light: #0c2748;
+  --gold: #d8b36a;
+  --gold-light: #ead39d;
+  --cream: #f5efdf;
+  --muted: #b6c0cc;
+  --line: rgba(255, 255, 255, 0.14);
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(216, 179, 106, 0.12),
+      transparent 35%
+    ),
+    var(--navy);
+  color: var(--cream);
+  font-family: "Montserrat", sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.manager {
+  width: min(100% - 32px, 980px);
+  margin: 0 auto;
+  padding: 48px 0 56px;
+}
+
+.manager-header {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+h1,
+h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2.8rem, 9vw, 4.5rem);
+  line-height: 0.95;
+}
+
+.manager-header p:last-child,
+.invite-card p,
+.manager-note {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.invite-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.invite-card {
+  padding: 24px;
+  border: 1px solid rgba(216, 179, 106, 0.28);
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.13);
+  box-shadow: var(--shadow);
+}
+
+.invite-badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--gold);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.invite-card h2 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.invite-card p {
+  min-height: 52px;
+  margin: 0 0 20px;
+  font-size: 0.86rem;
+}
+
+.invite-card label {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--gold);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.invite-card input {
+  width: 100%;
+  height: 48px;
+  padding: 0 12px;
+  color: var(--cream);
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  outline: 0;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 9px;
+  margin-top: 12px;
+}
+
+.actions button,
+.actions a {
+  min-height: 46px;
+  display: grid;
+  place-items: center;
+  padding: 0 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.actions button {
+  border: 0;
+  color: var(--navy);
+  background: var(--gold);
+}
+
+.actions button:hover {
+  background: var(--gold-light);
+}
+
+.actions a {
+  color: var(--cream);
+  border: 1px solid var(--line);
+}
+
+.manager-note {
+  max-width: 720px;
+  margin: 26px auto 0;
+  text-align: center;
+  font-size: 0.78rem;
+}
+
+.manager-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translate(-50%, 18px);
+  padding: 11px 16px;
+  color: var(--cream);
+  background: var(--navy-light);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.22s ease;
+}
+
+.manager-toast.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+@media (max-width: 720px) {
+  .manager {
+    padding-top: 30px;
+  }
+
+  .invite-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .invite-card p {
+    min-height: 0;
+  }
+}

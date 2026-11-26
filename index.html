@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <meta
+    name="description"
+    content="Convite de 18 anos do Pedro"
+  >
+
+  <title>18 anos — Convite</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+
+  <main class="site">
+
+    <!-- =========================================================
+         ABERTURA
+    ========================================================== -->
+
+    <section
+      class="screen opening-screen active"
+      data-screen="opening"
+      aria-labelledby="opening-title"
+    >
+
+      <div class="opening-background"></div>
+
+      <div class="opening-cover" aria-hidden="true">
+        <span class="opening-panel opening-panel-left"></span>
+        <span class="opening-panel opening-panel-right"></span>
+        <span class="opening-seam"></span>
+      </div>
+
+      <div class="opening-content">
+
+        <p class="eyebrow">CONVITE</p>
+
+        <div class="cover-number" aria-hidden="true">
+          18
+        </div>
+
+        <h1
+          id="opening-title"
+          class="cover-name"
+        >
+          PEDRO
+        </h1>
+
+        <div class="cover-divider"></div>
+
+        <div class="cover-event">
+          <span>26 DE DEZEMBRO</span>
+          <span>20:00</span>
+          <span>GARÇA — SP</span>
+        </div>
+
+        <button
+          type="button"
+          class="button button-gold"
+          id="open-invitation-button"
+        >
+          ABRIR CONVITE
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         APRESENTAÇÃO
+    ========================================================== -->
+
+    <section
+      class="screen apresentacao"
+      data-screen="presentation"
+      aria-labelledby="presentation-title"
+    >
+
+      <div class="content presentation-content">
+
+        <p class="eyebrow">UMA NOITE ESPECIAL</p>
+
+        <div class="presentation-photo-wrapper">
+          <img
+            src="assets/pedro.jpg"
+            alt="Pedro"
+            class="presentation-photo"
+          >
+        </div>
+
+        <h2 id="presentation-title">
+          Cheguei aos <span class="number-18">18</span>!
+        </h2>
+
+        <p class="lead-text">
+          Venha comemorar esse dia tão marcante comigo. Você é especial para mim, e desejo que possamos vivenciar essa noite com muita alegria, relembrando os nossos momentos juntos.
+        </p>
+
+        <div class="event-summary">
+
+          <div class="event-summary-item">
+            <span class="event-label">DATA</span>
+            <strong id="event-date">26/12/2026</strong>
+          </div>
+
+          <div class="event-summary-item">
+            <span class="event-label">HORÁRIO</span>
+            <strong id="event-time">20:00</strong>
+          </div>
+
+          <div class="event-summary-item">
+            <span class="event-label">LOCAL</span>
+            <strong id="event-location">
+              Patrulha Juvenil de Garça
+            </strong>
+          </div>
+
+        </div>
+
+        <button
+          type="button"
+          class="button button-gold"
+          data-next="details"
+        >
+          CONTINUAR
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         DETALHES
+    ========================================================== -->
+
+    <section
+      class="screen"
+      data-screen="details"
+      aria-labelledby="details-title"
+    >
+
+      <div class="content">
+
+        <div class="progress" id="progress-details">1 DE 4</div>
+
+        <p class="eyebrow">DETALHES</p>
+
+        <h2 id="details-title">
+          Onde será?
+        </h2>
+
+        <div class="details-card">
+
+          <div class="details-icon" aria-hidden="true">
+            <span>⌖</span>
+          </div>
+
+          <div class="details-info">
+
+            <strong id="details-location">
+              Patrulha Juvenil de Garça
+            </strong>
+
+            <span id="details-address">
+              R. Baden Powell, 451 - Williams,
+              Garça - SP, 17402-066
+            </span>
+
+          </div>
+
+        </div>
+
+        <button
+          type="button"
+          class="button button-outline"
+          id="details-map"
+        >
+          VER NO MAPA
+        </button>
+
+        <div class="nav-buttons single-button">
+
+          <button
+            type="button"
+            class="button button-gold"
+            data-next="responsible"
+          >
+            CONTINUAR
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         RESPONSÁVEL
+    ========================================================== -->
+
+    <section
+      class="screen form-screen"
+      data-screen="responsible"
+      aria-labelledby="responsible-title"
+    >
+
+      <div class="content">
+
+        <div class="progress" id="progress-responsible">2 DE 4</div>
+
+        <p class="eyebrow">CONFIRMAÇÃO</p>
+
+        <h2 id="responsible-title">
+          Quem está confirmando?
+        </h2>
+
+        <p class="form-description" id="responsible-description">
+          Informe o nome do responsável pela confirmação.
+        </p>
+
+        <p class="invite-info" id="invite-info"></p>
+
+        <label
+          class="field-label"
+          id="responsible-label"
+          for="responsible-input"
+        >
+          NOME DO RESPONSÁVEL
+        </label>
+
+        <input
+          type="text"
+          id="responsible-input"
+          class="text-input"
+          placeholder="Digite seu nome"
+          autocomplete="name"
+          maxlength="100"
+        >
+
+        <p
+          class="field-error"
+          id="responsible-error"
+          aria-live="polite"
+        ></p>
+
+        <div class="nav-buttons">
+
+          <button
+            type="button"
+            class="button button-ghost"
+            data-back="details"
+          >
+            VOLTAR
+          </button>
+
+          <button
+            type="button"
+            class="button button-gold"
+            data-next="quantity"
+          >
+            CONTINUAR
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         QUANTIDADE
+    ========================================================== -->
+
+    <section
+      class="screen form-screen"
+      data-screen="quantity"
+      aria-labelledby="quantity-title"
+    >
+
+      <div class="content">
+
+        <div class="progress" id="progress-quantity">3 DE 4</div>
+
+        <p class="eyebrow">PARTICIPANTES</p>
+
+        <h2 id="quantity-title">
+          Quantas pessoas irão?
+        </h2>
+
+        <p class="form-description">
+          Informe a quantidade de pessoas que participarão
+          da comemoração.
+        </p>
+
+        <p class="quantity-notice" id="quantity-notice">
+          O responsável pela confirmação também deve ser incluído na quantidade de participantes.
+        </p>
+
+        <div class="quantity-control">
+
+          <button
+            type="button"
+            class="quantity-button"
+            id="minus"
+            aria-label="Diminuir quantidade"
+          >
+            −
+          </button>
+
+          <span
+            id="quantity"
+            class="quantity-value"
+            aria-live="polite"
+          >
+            1
+          </span>
+
+          <button
+            type="button"
+            class="quantity-button"
+            id="plus"
+            aria-label="Aumentar quantidade"
+          >
+            +
+          </button>
+
+        </div>
+
+        <p class="quantity-limit" id="quantity-limit">
+          Máximo de 15 participantes
+        </p>
+
+        <div class="nav-buttons">
+
+          <button
+            type="button"
+            class="button button-ghost"
+            data-back="responsible"
+          >
+            VOLTAR
+          </button>
+
+          <button
+            type="button"
+            class="button button-gold"
+            data-next="names"
+          >
+            CONTINUAR
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         NOMES
+    ========================================================== -->
+
+    <section
+      class="screen form-screen"
+      data-screen="names"
+      aria-labelledby="names-title"
+    >
+
+      <div class="content">
+
+        <div class="progress" id="progress-names">4 DE 4</div>
+
+        <p class="eyebrow">PARTICIPANTES</p>
+
+        <h2 id="names-title">
+          Quem irá participar?
+        </h2>
+
+        <p class="form-description">
+          Informe o nome de cada participante.
+        </p>
+
+        <div id="names-container"></div>
+
+        <p
+          class="field-error"
+          id="names-error"
+          aria-live="polite"
+        ></p>
+
+        <div class="nav-buttons">
+
+          <button
+            type="button"
+            class="button button-ghost"
+            data-back="quantity"
+          >
+            VOLTAR
+          </button>
+
+          <button
+            type="button"
+            class="button button-gold"
+            data-next="review"
+          >
+            REVISAR
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         REVISÃO
+    ========================================================== -->
+
+    <section
+      class="screen form-screen"
+      data-screen="review"
+      aria-labelledby="review-title"
+    >
+
+      <div class="content">
+
+        <div class="progress" id="progress-review">4 DE 4</div>
+
+        <p class="eyebrow">REVISÃO</p>
+
+        <h2 id="review-title">
+          Confira sua confirmação
+        </h2>
+
+        <div class="review-card">
+
+          <span class="review-label" id="review-responsible-label">
+            CASA DE
+          </span>
+
+          <strong id="review-responsible">
+            —
+          </strong>
+
+          <span
+            id="review-count"
+            class="review-count"
+          >
+            0 participantes
+          </span>
+
+          <ul
+            id="review-names"
+            class="review-names"
+          ></ul>
+
+        </div>
+
+        <div class="review-event">
+
+          <span id="review-date">
+            26/12/2026
+          </span>
+
+          <span id="review-time">
+            20:00
+          </span>
+
+          <span id="review-location">
+            Patrulha Juvenil de Garça
+          </span>
+
+        </div>
+
+        <div class="nav-buttons">
+
+          <button
+            type="button"
+            class="button button-ghost"
+            data-back="names"
+          >
+            VOLTAR
+          </button>
+
+          <button
+            type="button"
+            class="button button-gold"
+            id="confirm-button"
+          >
+            CONFIRMAR PRESENÇA
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         CONFIRMADO
+    ========================================================== -->
+
+    <section
+      class="screen"
+      data-screen="confirmed"
+      aria-labelledby="confirmed-title"
+    >
+
+      <div class="content">
+
+        <p class="eyebrow">CONFIRMADO</p>
+
+        <h2 id="confirmed-title">
+          Presença confirmada!
+        </h2>
+
+        <p
+          id="confirmed-message"
+          class="lead-text"
+        >
+          Sua confirmação foi registrada.
+        </p>
+
+        <div class="confirmation-card">
+
+          <span class="review-label" id="confirmed-responsible-label">
+            CASA DE
+          </span>
+
+          <strong id="confirmed-responsible">
+            —
+          </strong>
+
+          <span
+            id="confirmed-count"
+            class="review-count"
+          >
+            0 participantes
+          </span>
+
+          <ul
+            id="confirmed-names"
+            class="review-names"
+          ></ul>
+
+        </div>
+
+        <div class="confirmed-actions">
+
+          <button
+            type="button"
+            class="button button-outline"
+            id="copy-confirmation-link"
+          >
+            COPIAR LINK DA CONFIRMAÇÃO
+          </button>
+
+          <button
+            type="button"
+            class="button button-outline"
+            id="confirmed-map"
+          >
+            VER LOCAL NO MAPA
+          </button>
+
+          <button
+            type="button"
+            class="button button-ghost"
+            id="edit-confirmation"
+          >
+            EDITAR CONFIRMAÇÃO
+          </button>
+
+        </div>
+
+        <p class="deadline-text">
+          Você poderá alterar sua confirmação até
+          <strong>10/12/2026</strong>.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         PRAZO ENCERRADO
+    ========================================================== -->
+
+    <section
+      class="screen"
+      data-screen="closed"
+      aria-labelledby="closed-title"
+    >
+
+      <div class="content">
+
+        <p class="eyebrow">PRAZO ENCERRADO</p>
+
+        <h2 id="closed-title">
+          Confirmações encerradas
+        </h2>
+
+        <p class="lead-text">
+          O prazo para confirmar ou alterar sua presença
+          já terminou.
+        </p>
+
+        <div class="closed-event">
+
+          <strong id="closed-location">
+            Patrulha Juvenil de Garça
+          </strong>
+
+          <span id="closed-address">
+            R. Baden Powell, 451 - Williams,
+            Garça - SP, 17402-066
+          </span>
+
+        </div>
+
+        <button
+          type="button"
+          class="button button-outline"
+          id="closed-map"
+        >
+          VER LOCAL NO MAPA
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       TOAST
+  ========================================================== -->
+
+  <div
+    id="toast"
+    class="toast"
+    role="status"
+    aria-live="polite"
+  ></div>
+
+
+  <!-- =========================================================
+       SCRIPTS
+  ========================================================== -->
+
+  <script src="assets/invites.js"></script>
+  <script src="assets/app.js"></script>
+
+</body>
+</html>
